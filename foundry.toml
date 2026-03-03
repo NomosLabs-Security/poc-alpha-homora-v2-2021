@@ -1,0 +1,15 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "london"
+
+[profile.default.rpc_endpoints]
+mainnet = "https://rpc.ankr.com/eth"
+
+[profile.default.etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+
+# Fork settings for reproduction
+# Block: 11846647 (Alpha Homora V2 exploit block)
+# forge test --fork-url https://rpc.ankr.com/eth --fork-block-number 11846647
